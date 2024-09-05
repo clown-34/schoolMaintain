@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GUIS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="GUIS Logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Home (1)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="homepage">
+            <h1>Welcome to GUIS</h1>
+           
+        </section>
+
+        <section class="content">
+            <h2>Submit a maintenance request</h2>
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=mNpkfG0Y0EyEa5LUGPS73wcn9LKmB5JIti-D8C7Yx-VUM0VRVzZUWEcyTE0yUFVLMUs5V0xBU1dQUC4u&rd2820d70bb514898b0a21a28a53ea4fb=42" width="100%" height="800px" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen id="myform"> </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GUIS. All rights reserved.</p>
+    </footer>
+
+    <script>
+      
+        const iframe = document.getElementById('myform');
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const test = iframeDoc.getElementById('question-list');
+        //const test =iframeDoc.getElementByXpath("//*[@id='FormTitleId_titleAriaId']/div/span/b");
+        
+
+
+        function $x(DOCUMENT, STR_XPATH) {
+            var xresult = DOCUMENT.evaluate(STR_XPATH, DOCUMENT, null, XPathResult.ANY_TYPE, null);
+            var xnodes = [];
+            var xres;
+            while (xres = xresult.iterateNext()) {
+                xnodes.push(xres);
+            }
+            return xnodes;
+        }
+        //const test = $x(iframeDoc,"div")
+
+        // const test = iframeDoc.getElementsByClassName("")
+
+
+        console.log(iframeDoc);
+
+
+
+    </script>
+</body>
+</html>

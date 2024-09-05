@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e26269b-b335-4015-852e-868a52d49a20/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/schoolMaintain-webApp",
+    "appService.deploySubpath": "."
+}

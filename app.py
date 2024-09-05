@@ -28,5 +28,10 @@ def hello():
        return redirect(url_for('index'))
 
 
+@app.route('/test')
+def test():
+   #print('Request for index page received')
+   return render_template('/src/index.html')
+
 if __name__ == '__main__':
    app.run()
